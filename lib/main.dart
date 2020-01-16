@@ -66,7 +66,7 @@ class CustomListview extends StatelessWidget {
     return new Container(
       padding: EdgeInsets.all(10.0),
       child: new Center(
-        child: new Row(
+        child: new Column(
           children: <Widget>[
             new Image(
               image: new NetworkImage(image),
