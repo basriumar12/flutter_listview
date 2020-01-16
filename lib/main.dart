@@ -66,16 +66,31 @@ class CustomListview extends StatelessWidget {
     return new Container(
       padding: EdgeInsets.all(10.0),
       child: new Center(
-        child: new Column(
+        child: new Row(
           children: <Widget>[
             new Image(
               image: new NetworkImage(image),
               width: 100.0,
             ),
-            new Text(
-              judul,
-              style: new TextStyle(fontSize: 20.0),
-            )
+           new Container(
+             padding: EdgeInsets.all(10.0),
+             child: new Center(
+               child: new Column(
+                 children: <Widget>[
+                   new Text(
+                     judul,
+                     style: new TextStyle(fontSize: 20.0),
+                   ),
+                   //solusi police line masukin dalam container, terus masuki dalam child
+                   new Container(
+                     width: 200.0,
+                     child:
+                     new Text("bisa di isi deskrip adada da da dsi", style: new TextStyle(fontSize :15.0),),
+                   )
+                 ],
+               ),
+             ),
+           )
           ],
         ),
       ),
